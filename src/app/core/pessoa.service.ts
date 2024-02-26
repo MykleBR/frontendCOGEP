@@ -12,7 +12,35 @@ export class PessoaService {
     return this.pessoas;
   }
 
+  getPessoa(id: string): Pessoa | undefined {
+    return this.pessoas.find((p) => p.id === id);
+  }
+
   salvarPessoa(pessoa: Pessoa) {
-    this.pessoas.push(pessoa);
+    
+    const index = this.pessoas.findIndex((p) => p.id === pessoa.id);
+
+    if (index !== -1) {
+      
+      this.pessoas[index] = { ...this.pessoas[index], ...pessoa };
+    } else {
+      
+      pessoa.id = this.generateUniqueId();
+      this.pessoas.push(pessoa);
+    }
+  }
+
+  excluirPessoa(id: string) {
+    
+    const index = this.pessoas.findIndex((p) => p.id === id);
+
+    if (index !== -1) {
+      this.pessoas.splice(index, 1);
+    }
+  }
+
+  private generateUniqueId(): string {
+    
+    return 'id_unico_gerado';
   }
 }
