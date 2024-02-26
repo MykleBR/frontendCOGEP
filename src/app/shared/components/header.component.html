@@ -1,0 +1,31 @@
+<!-- header.component.html -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Sua Aplicação</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <ng-container *ngIf="!loggedIn">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signup">Signup</a>
+        </li>
+      </ng-container>
+      <ng-container *ngIf="loggedIn">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/pessoas" routerLinkActive="active">Pessoas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/atividades" routerLinkActive="active">Atividades</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()">Logout</a>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</nav>
