@@ -16,7 +16,7 @@ Passos:
   Clone o repositório do seu frontend para sua máquina.
 
         git clone https://seurepositorio.git
-        cd nome-do-seu-frontend
+        cd frontendCOGEP
 
 Instalar Dependências:
 
