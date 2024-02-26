@@ -15,7 +15,7 @@ Passos:
   Clonar o Repositório:
   Clone o repositório do seu frontend para sua máquina.
 
-        git clone https://seurepositorio.git
+        git clone https://github.com/MykleBR/frontendCOGEP.git
         cd frontendCOGEP
 
 Instalar Dependências:
