@@ -2,40 +2,32 @@ ESTE É MEU PRIMEIRO PROJETO UTILIZANDO ANGULAR E NGZORRO.
 
 Pré-requisitos:
 
-    Node.js e npm:
-        Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo em nodejs.org.
+  Node.js e npm:
+  Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo em nodejs.org.
 
-    Angular CLI:
-        Instale o Angular CLI globalmente usando o seguinte comando:
-
-    bash
+  Angular CLI:
+  Instale o Angular CLI globalmente usando o seguinte comando:
 
         npm install -g @angular/cli
 
 Passos:
 
-    Clonar o Repositório:
-        Clone o repositório do seu frontend para sua máquina.
-
-    bash
+  Clonar o Repositório:
+  Clone o repositório do seu frontend para sua máquina.
 
         git clone https://seurepositorio.git
         cd nome-do-seu-frontend
 
 Instalar Dependências:
 
-    Instale as dependências do projeto.
-
-    bash
-
+  Instale as dependências do projeto.
+  
         npm install
 
 Iniciar o Servidor de Desenvolvimento:
 
-    Inicie o servidor de desenvolvimento do Angular.
-
-    bash
-
+  Inicie o servidor de desenvolvimento do Angular.
+  
         ng serve
 
 O servidor estará disponível em http://localhost:4200/.
