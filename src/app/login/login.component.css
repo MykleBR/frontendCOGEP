@@ -1,0 +1,46 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    margin: 5% auto;
+    padding: 40px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  nz-form {
+    width: 100%;
+  }
+  
+  /* Alinhar labels, inputs e botão dentro do nz-form-item */
+  nz-form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Estica os itens para ocupar toda a largura */
+    margin-bottom: 24px;
+  }
+  
+  nz-form-label {
+    margin-bottom: 8px; /* Espaço entre o label e o input */
+    text-align: left; /* Garante que o texto do label esteja alinhado à esquerda */
+  }
+  
+  input[nz-input], button[nz-button] {
+    height: 40px;
+    border-radius: 4px;
+  }
+  
+  button[nz-button] {
+    width: 100%;
+    font-weight: bold;
+    margin-top: 16px; /* Adiciona um espaço acima do botão para separá-lo dos inputs */
+  }
+  
+  button[nz-button]:hover {
+    opacity: 0.9;
+  }
+  

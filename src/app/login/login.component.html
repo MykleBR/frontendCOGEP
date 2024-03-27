@@ -1,0 +1,22 @@
+<div class="login-container">
+    <nz-form nzLayout="vertical" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <nz-form-item>
+        <nz-form-label [nzFor]="'username'">Username</nz-form-label>
+        <nz-form-control nzErrorTip="Por favor, insira o nome de usuário!">
+          <input nz-input formControlName="username" id="username" placeholder="Nome de usuário" />
+        </nz-form-control>
+      </nz-form-item>
+  
+      <nz-form-item>
+        <nz-form-label [nzFor]="'password'">Senha</nz-form-label>
+        <nz-form-control nzErrorTip="Por favor, insira a senha!">
+          <input nz-input type="password" formControlName="password" id="password" placeholder="Senha" />
+        </nz-form-control>
+      </nz-form-item>
+  
+      <nz-form-item>
+        <button nz-button nzType="primary" [disabled]="!loginForm.valid">Login</button>
+      </nz-form-item>
+    </nz-form>
+  </div>
+  

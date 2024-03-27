@@ -1,0 +1,37 @@
+<div class="atividades-container">
+    <form nz-form [formGroup]="atividadesForm" (ngSubmit)="onSubmit()">
+      <nz-form-item>
+        <nz-form-label [nzFor]="'nome'">Atividade</nz-form-label>
+        <nz-form-control nzErrorTip="Por favor, insira o nome da atividade!">
+          <input nz-input formControlName="nome" id="nome" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzFor]="'descricao'">Descrição</nz-form-label>
+        <nz-form-control nzErrorTip="Por favor, insira a descrição da atividade!">
+          <textarea nz-input formControlName="descricao" id="descricao"></textarea>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzFor]="'pessoaId'">Pessoa</nz-form-label>
+        <nz-form-control nzErrorTip="Por favor, selecione a pessoa!">
+          <nz-select formControlName="pessoaId" id="pessoaId">
+            <nz-option *ngFor="let pessoa of pessoas" [nzValue]="pessoa.id" [nzLabel]="pessoa.nome"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzFor]="'status'">Status</nz-form-label>
+        <nz-form-control nzErrorTip="Por favor, selecione o status!">
+          <nz-select formControlName="status" id="status">
+            <nz-option *ngFor="let status of status" [nzValue]="status.id" [nzLabel]="status.nome"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+
+      <button nz-button nzType="primary" [disabled]="!atividadesForm.valid">Cadastrar Atividade</button>
+    </form>
+</div>

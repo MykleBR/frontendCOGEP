@@ -1,0 +1,41 @@
+/* Estilo para a tabela de tarefas */
+.nz-table {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.nz-table th {
+    background-color: #40a9ff;
+    color: #fff;
+    padding: 16px;
+}
+
+.nz-table td {
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nz-table tr:hover {
+    background-color: #e6f7ff;
+}
+
+/* Detalhes da tarefa selecionada */
+.tarefa-detalhes {
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #40a9ff86;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    width: 90%;
+    max-width: 600px;
+}
+
+.tarefa-detalhes h3 {
+    margin-bottom: 1rem;
+}
+
+.tarefa-detalhes p {
+    margin: 0.5rem 0;
+}

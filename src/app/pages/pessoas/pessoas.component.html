@@ -1,0 +1,27 @@
+<div class="pessoa-form-container">
+    <form nz-form [formGroup]="formPessoa" (ngSubmit)="onSubmit()">
+      <nz-form-item>
+        <nz-form-label [nzFor]="'nome'">Nome</nz-form-label>
+        <nz-form-control nzErrorTip="Por favor, insira o nome.">
+          <input nz-input formControlName="nome" id="nome" placeholder="Nome Completo"/>
+        </nz-form-control>
+      </nz-form-item>
+  
+      <nz-form-item>
+        <nz-form-label [nzFor]="'email'">Email</nz-form-label>
+        <nz-form-control nzErrorTip="Por favor, insira um email válido.">
+          <input nz-input formControlName="email" id="email" type="email" placeholder="Email"/>
+        </nz-form-control>
+      </nz-form-item>
+  
+      <nz-form-item>
+        <nz-form-label [nzFor]="'idade'">Idade</nz-form-label>
+        <nz-form-control nzErrorTip="A idade deve ser maior que 0.">
+          <input nz-input formControlName="idade" id="idade" type="number" placeholder="Idade"/>
+        </nz-form-control>
+      </nz-form-item>
+  
+      <button nz-button nzType="primary" [disabled]="!formPessoa.valid">Cadastrar</button>
+    </form>
+  </div>
+  

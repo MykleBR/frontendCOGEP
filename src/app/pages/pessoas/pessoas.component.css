@@ -1,0 +1,30 @@
+.pessoa-form-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e8e8e8;
+}
+
+.nz-form-item:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+input[nz-input], textarea[nz-input] {
+    border-radius: 5px;
+}
+
+button[nz-button] {
+    background-color: #40a9ff;
+    color: white;
+    border: none;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+button[nz-button]:hover {
+    background-color: #52c41a;
+}

@@ -1,0 +1,32 @@
+<!-- Tabela de Tarefas -->
+<nz-table #table [nzData]="tarefas" nzBordered>
+    <thead>
+      <tr>
+        <th nzWidth="15%">Título</th>
+        <th nzWidth="40%">Descrição</th>
+        <th nzWidth="15%">Responsável</th>
+        <th nzWidth="15%">Prazo</th>
+        <th nzWidth="15%">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tarefa of tarefas" (click)="onSelect(tarefa)">
+        <td>{{ tarefa.titulo }}</td>
+        <td>{{ tarefa.descricao }}</td>
+        <td>{{ tarefa.responsavel }}</td>
+        <td>{{ tarefa.prazo }}</td>
+        <td>{{ tarefa.status }}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+  
+  <!-- Detalhes da Tarefa -->
+  <div *ngIf="tarefaSelecionada" class="tarefa-detalhes">
+    <h3>Detalhes da Tarefa</h3>
+    <p><strong>Título:</strong> {{ tarefaSelecionada.titulo }}</p>
+    <p><strong>Descrição:</strong> {{ tarefaSelecionada.descricao }}</p>
+    <p><strong>Responsável:</strong> {{ tarefaSelecionada.responsavel }}</p>
+    <p><strong>Prazo:</strong> {{ tarefaSelecionada.prazo }}</p>
+    <p><strong>Status:</strong> {{ tarefaSelecionada.status }}</p>
+  </div>
+  
